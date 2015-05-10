@@ -1,16 +1,16 @@
 ###############################################################################
 #
-# CSB740 board makefile.
+# Beaglebone Black makefile
 #
 #
-PLATFORM		= CSB740
+PLATFORM		= BEAGLEBONEBLACK
 TOPDIR			= $(UMONTOP)
-TGTDIR			= csb740
+TGTDIR			= beagleboneblack
 CPUTYPE			= arm
 FILETYPE		= elf
 
 # Using tools installed by "sudo apt-get install gcc-arm-none-eabi"...
-ABIDIR          = /usr/lib/gcc/arm-none-eabi/4.8.2
+ABIDIR          = /usr/lib/gcc/arm-none-eabi/4.9.2
 LIBABIDIR       = -L $(ABIDIR) 
 TOOL_PREFIX     = /usr/bin/arm-none-eabi
 
