@@ -15,13 +15,13 @@
  * phone:   908-582-2351
  * 
  *
- * Modified for the CSB740 - OMAP3530 Single Board
+ * Modified for the Beaglebone Black
  *
- * rom_reset.s:
-  */
+ * rom_reset.S:
+ */
 
 #include "warmstart.h"
-#include "omap3530.h"
+#include "beagleboneblack"
 #include "config.h"
 
     /*

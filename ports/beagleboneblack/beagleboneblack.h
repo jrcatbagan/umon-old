@@ -1,14 +1,15 @@
 //==========================================================================
 //
-// omap3530.h
+// beagleboneblack.h
 //
 // Author(s):    Luis Torrico, Cogent Computer Systems, Inc.
-// Contributors: 
+// Contributors: Jarielle Catbagan
 // Date:         05/02/2008
-// Description:  This file contains register base addresses and offsets
-//				 and access macros for the OMAP3530 on-chip peripherals
-//				 Peripherals not used by UMON have not been tested (and
-//				 may not be defined). Use these defines with caution!!
+// Description:  This file was modified from omap3530.h. This file containes
+//			register base addresses and offsets as well as access macros
+//			for the AM335x/Beaglebone Black on-chip peripherals. 
+//			Peripherals not used by UMON have not been tested (and
+//			may not be defined). Use these defines with caution!!
 //
 
 #include "bits.h"

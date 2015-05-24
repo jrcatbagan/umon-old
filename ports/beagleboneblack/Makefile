@@ -4,18 +4,20 @@
 #
 #
 PLATFORM		= BEAGLEBONEBLACK
+# From the perspective of this file, UMONTOP is ../../umon_main
 TOPDIR			= $(UMONTOP)
 TGTDIR			= beagleboneblack
 CPUTYPE			= arm
 FILETYPE		= elf
 
-# Using tools installed by "sudo apt-get install gcc-arm-none-eabi"...
+# Using tools installed in Arch Linux using "sudo pacman --sync arm-none-eabi-gcc"
+# ABIDIR contains a directory to be also searched for libraries
 ABIDIR          = /usr/lib/gcc/arm-none-eabi/4.9.2
 LIBABIDIR       = -L $(ABIDIR) 
 TOOL_PREFIX     = /usr/bin/arm-none-eabi
 
 COMMON_AFLAGS	= -c -D PLATFORM_$(PLATFORM)=1 -D ASSEMBLY_ONLY 
-CUSTOM_CFLAGS	= -mcpu=arm1136j-s -O2 -isystem $(ABIDIR)/include -Wno-char-subscripts
+CUSTOM_CFLAGS	= -mcpu=cortex-a8 -O2 -isystem $(ABIDIR)/include -Wno-char-subscripts
 
 
 ###############################################################################
@@ -24,7 +26,8 @@ CUSTOM_CFLAGS	= -mcpu=arm1136j-s -O2 -isystem $(ABIDIR)/include -Wno-char-subscr
 # The following variables are used to establish the system's memory map.
 # 
 BOOTROMBASE=0x402F0400
-BOOTROMLEN=0x100000
+# Max size of internal SRAM of AM335x is 109Kb = 0x1B400
+BOOTROMLEN=0x1B400
 BOOTRAMBASE=0x80000000
 BOOTRAMLEN=0x100000
 RAMTSTROMBASE=0x80100000

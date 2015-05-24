@@ -1,8 +1,8 @@
 /*
  * Monitor configuration file for the Beaglebone Black
  *
- * Adapted by Luis Torrico, Cogent Computer Systems, Inc.
- *			email: luis@cogcomp.com
+ * Adapted by Jarielle Catbagan 
+ * email: jcatbagan93@gmail.com | jrcatbagan@ca.rr.com
  *
  *
  * General notice:
@@ -32,7 +32,9 @@
  * regarding the use of these definitions.
  * DEFAULT_IPADD could be set to "DHCP" or "BOOTP" as well.
  */
-#define	DEFAULT_ETHERADD "00:30:23:40:00:"  	// Cogent Block
+#define DEFAULT_ETHERADD "D0:39:72:4B:89:21"
+//#define DEFAULT_ETHERADD "1C:BA:BC:E2:2E:39"
+//#define DEFAULT_ETHERADD "1C:BA:BC:E2:3C:B8"
 #define DEFAULT_IPADD    "192.168.1.137"		
 
 #define CPU_LE
