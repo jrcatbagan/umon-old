@@ -1,5 +1,5 @@
 /*
- * Monitor configuration file for CSB740
+ * Monitor configuration file for the Beaglebone Black
  *
  * Adapted by Luis Torrico, Cogent Computer Systems, Inc.
  *			email: luis@cogcomp.com
@@ -19,13 +19,7 @@
  * phone:   908-582-2351
  */
 
-/*
- * The target_putchar() function also drops the character at the
- * LCD...
- */
-//#define MORE_PUTCHAR lcd_putchar
-//#define CONSOLE_UART_BASE (OMAP35XX_L4_IO_BASE+0x6C000)
-#define CONSOLE_UART_BASE 0x4806C000
+#define CONSOLE_UART_BASE 0x44E09000
 
 #define SIO_STEP 4
 #define IEN_DEFAULT 0x40
@@ -39,7 +33,7 @@
  * DEFAULT_IPADD could be set to "DHCP" or "BOOTP" as well.
  */
 #define	DEFAULT_ETHERADD "00:30:23:40:00:"  	// Cogent Block
-#define DEFAULT_IPADD    "192.168.254.110"		
+#define DEFAULT_IPADD    "192.168.1.137"		
 
 #define CPU_LE
 

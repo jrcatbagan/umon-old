@@ -23,7 +23,7 @@ CUSTOM_CFLAGS	= -mcpu=arm1136j-s -O2 -isystem $(ABIDIR)/include -Wno-char-subscr
 # Memory map configuration:
 # The following variables are used to establish the system's memory map.
 # 
-BOOTROMBASE=0x08000000
+BOOTROMBASE=0x402F0400
 BOOTROMLEN=0x100000
 BOOTRAMBASE=0x80000000
 BOOTRAMLEN=0x100000
