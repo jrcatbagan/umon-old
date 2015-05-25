@@ -21,7 +21,7 @@
  */
 
 #include "warmstart.h"
-#include "beagleboneblack"
+#include "am335x.h"
 #include "config.h"
 
     /*
