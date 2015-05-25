@@ -31,4 +31,4 @@
 #define APPLICATION	(5<<4)
 #define APP_EXIT	(9<<4)
 
-#endif
+#endif /* _WARMSTART_H_ */
