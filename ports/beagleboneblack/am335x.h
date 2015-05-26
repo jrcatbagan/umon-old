@@ -12,6 +12,8 @@
 //			may not be defined). Use these defines with caution!!
 //
 
+#ifndef _AM335X_H_
+#define _AM335X_H_
 #include "bits.h"
 
 
@@ -850,3 +852,5 @@
 #define SD_ADMASAH			0x025C	// ADMA System Address High bits
 #define SD_REV				0x02FC	// Versions
 /*=====================================================================================*/
+
+#endif /* _AM335X_H_ */

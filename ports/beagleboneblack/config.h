@@ -19,7 +19,9 @@
  * phone:   908-582-2351
  */
 
-#define CONSOLE_UART_BASE 0x44E09000
+#include "am335x.h"
+
+#define CONSOLE_UART_BASE UART0_BASE
 
 #define SIO_STEP 4
 #define IEN_DEFAULT 0x40
