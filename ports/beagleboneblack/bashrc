@@ -1,6 +1,6 @@
 PS1=BEAGLEBONEBLACK:
 export TITLE="Beaglebone Black"
-export UMONTOP=../../umon_main
+export UMONTOP=../../main
 export tools=$UMONTOP/host
 export target=$UMONTOP/target
 export cpu=$target/cpu
