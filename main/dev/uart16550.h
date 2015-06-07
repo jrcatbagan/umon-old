@@ -132,6 +132,7 @@ extern int ConsoleBaudSet(int baud);
 extern int target_getchar(void);
 extern int target_gotachar(void);
 extern int target_putchar(char c);
+extern void target_putchar_loop(void);
 extern int target_console_empty(void);
 extern int getUartDivisor(int baud,unsigned char *hi, unsigned char *lo);
 

@@ -193,3 +193,10 @@ target_gotachar(void)
 #endif
 	return(0);
 }
+
+void
+target_putchar_loop(void)
+{
+	while (1)
+		target_putchar('j');
+}
