@@ -4,7 +4,7 @@
 #
 #
 PLATFORM		= BEAGLEBONEBLACK
-# From the perspective of this file, UMONTOP is ../../umon_main
+# From the perspective of this file, UMONTOP is ../../main
 TOPDIR			= $(UMONTOP)
 TGTDIR			= beagleboneblack
 CPUTYPE			= arm
@@ -43,22 +43,29 @@ include	$(TOPDIR)/make/common.make
 
 # Build each variable from a list of individual filenames...
 #
-LOCSSRC		= 
+LOCSSRC		=
 CPUSSRC		= vectors_arm.S
-LOCCSRC		= ad7843.c cpuio.c etherdev.c nand740.c omap3530_gpio.c \
-			  omap3530_lcd.c omap3530_sdmmc.c
-COMCSRC		= arp.c cast.c cache.c chario.c cmdtbl.c \
-			  docmd.c dhcp_00.c dhcpboot.c dns.c edit.c env.c ethernet.c \
-			  flash.c gdb.c icmp.c if.c ledit_vt100.c monprof.c \
-			  fbi.c font.c mprintf.c memcmds.c malloc.c moncom.c memtrace.c \
-			  misccmds.c misc.c nand.c password.c redirect.c \
-			  reg_cache.c sbrk.c sd.c \
-			  start.c struct.c symtbl.c syslog.c tcpstuff.c tfs.c tfsapi.c \
-			  tfsclean1.c tfscli.c tfsloader.c tfslog.c tftp.c timestuff.c \
-			  tsi.c xmodem.c
-CPUCSRC		= ldatags.c except_arm.c misc_arm.c strace_arm.c 
-IODEVSRC	= smsc911x.c uart16550.c fb_draw.c
-FLASHSRC	= s29gl512n_16x1.c
+LOCCSRC		=
+COMCSRC		=
+CPUCSRC		=
+IODEVSRC	=
+FLASHSRC	=
+#LOCSSRC		= 
+#CPUSSRC		= vectors_arm.S
+#LOCCSRC		= cpuio.c etherdev.c nand740.c omap3530_gpio.c \
+#			  omap3530_lcd.c omap3530_sdmmc.c
+#COMCSRC		= arp.c cast.c cache.c chario.c cmdtbl.c \
+#			  docmd.c dhcp_00.c dhcpboot.c dns.c edit.c env.c ethernet.c \
+#			  flash.c gdb.c icmp.c if.c ledit_vt100.c monprof.c \
+#			  fbi.c font.c mprintf.c memcmds.c malloc.c moncom.c memtrace.c \
+#			  misccmds.c misc.c nand.c password.c redirect.c \
+#			  reg_cache.c sbrk.c sd.c \
+#			  start.c struct.c symtbl.c syslog.c tcpstuff.c tfs.c tfsapi.c \
+#			  tfsclean1.c tfscli.c tfsloader.c tfslog.c tftp.c timestuff.c \
+#			  tsi.c xmodem.c
+#CPUCSRC		= ldatags.c except_arm.c misc_arm.c strace_arm.c 
+#IODEVSRC	= smsc911x.c uart16550.c fb_draw.c
+#FLASHSRC	= s29gl512n_16x1.c
 
 
 include $(TOPDIR)/make/objects.make
@@ -92,7 +99,7 @@ ramtst:	$(BUILDDIR)/ramtst.$(FILETYPE)
 	@ls $(BUILDDIR)/ramtst*
 
 $(BUILDDIR)/boot.$(FILETYPE): $(BUILDDIR) $(OBJS) libz.a \
-		libg.a makefile
+		libg.a Makefile
 	$(CC) $(ASMFLAGS) -o rom_reset.o rom_reset.S
 	$(MAKE_MONBUILT)
 	sed -e s/ROMBASE/$(BOOTROMBASE)/ -e s/ROMLEN/$(BOOTROMLEN)/ \
