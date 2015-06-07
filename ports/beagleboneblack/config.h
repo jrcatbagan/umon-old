@@ -155,58 +155,58 @@
 
 /* descriptions of INCLUDE_xx macros are placed here for quick acess */
 						
-#define INCLUDE_MEMTRACE	0 // enable simple memory tracing, simple printf()-like function that
-					// logs data instead of to UART
-#define INCLUDE_MEMCMDS         0 // memory display, modification and test commands (see memcmds.c)
-#define INCLUDE_EDIT            0 // ascii file editor to edit files in TFS (see edit.c); requires
-					// TFS and flash drivers to also be enabled
-#define INCLUDE_DISASSEMBLER    0 // pulls in a disassembler
-#define INCLUDE_UNZIP           0 // zlib stuff
-#define INCLUDE_ETHERNET        0 // ethernet drivers with ARP with some low level ethernet code
-#define INCLUDE_ICMP		0
-#define INCLUDE_TFTP            0 // TFTP client and server, assumes ethernet is enabled
-#define INCLUDE_DHCPBOOT        0 // enable the DHCP/BOOTP client, requires ethernet
-#define INCLUDE_TFS             0 // required by other TFS macros, provides basic TFS functionality
-#define INCLUDE_TFSCLI          0 // enable TFS command on the command line
-#define INCLUDE_TFSAPI          0 // TFS hooks for use by applications
-#define INCLUDE_TFSSCRIPT       0 // enables CLI commands associated with scripts
-#define INCLUDE_TFSSYMTBL       0 // enable symbol-table functionality
-#define INCLUDE_XMODEM          0 // enable xmodem
-#define INCLUDE_LINEEDIT        0 // enable command line editor and history
-#define INCLUDE_EE              0 // expression evaluator
-#define INCLUDE_FLASH           0 // enable flash drivers
-#define INCLUDE_STRACE          0 // enable 'strack trace' command
-#define INCLUDE_CAST            0 // enable 'cast' command for complex structure display at the CLI
-#define INCLUDE_STRUCT          0 // enable the struct command, requires TFS
-#define INCLUDE_REDIRECT        0 // enable monitor's CLI to redirect command output to a TFS file
-#define INCLUDE_QUICKMEMCPY     0 // enable faster memory stuff in genlib.c
-#define INCLUDE_PROFILER        0 // enable some code and a CLI command to provide an application
-					// with some task and function level profiling
 #define INCLUDE_BBC             0 // enable some code and a CLI command to provide an application
 					// with a basic ability to organize basic block coverage
 					// verification
-#define INCLUDE_STOREMAC        0 // force user to establish MAC in the etheradd space allocated in 
-					// reset.s; requires flash drivers
-#define INCLUDE_SHELLVARS	0 // enable shell variable functionality in the monitor
-#define INCLUDE_MALLOC		0 // enable monitor's malloc, 'heap' command on the CLI
-#define INCLUDE_PORTCMD	        0 // if set, the mon_portcmd(int cmd, void *arg) API can be used
-					// to build port-specific API extensions
-#define INCLUDE_SYSLOG	        0 
+#define INCLUDE_CAST            0 // enable 'cast' command for complex structure display at the CLI
+#define INCLUDE_DHCPBOOT        0 // enable the DHCP/BOOTP client, requires ethernet
+#define INCLUDE_DISASSEMBLER    0 // pulls in a disassembler
+#define INCLUDE_DNS		0
+#define INCLUDE_EDIT            0 // ascii file editor to edit files in TFS (see edit.c); requires
+					// TFS and flash drivers to also be enabled
+#define INCLUDE_EE              0 // expression evaluator
+#define INCLUDE_ETHERNET        0 // ethernet drivers with ARP with some low level ethernet code
+#define INCLUDE_FBI		0
+#define INCLUDE_FLASH           0 // enable flash drivers
 #define INCLUDE_HWTMR	        0 // if set, the target port must supply a function called
 					// target_timer() which returns a 32-bit value representing
 					// a hardware-resident clock whose rate is defined by 
 					// TIMER_TICKS_PER_MSEC
-#define INCLUDE_VERBOSEHELP     0 // enable full help text
 #define INCLUDE_GDB		0 // enable 'gdb' command, incomplete facility with the eventual
 					goal of hooking up to a gdb debugger
-#define INCLUDE_USRLVL		0 // if set, code that incorporates user levels is included in the
-					// build
+#define INCLUDE_ICMP		0
 #define INCLUDE_JFFS2		0
 #define INCLUDE_JFFS2ZLIB	0
-#define INCLUDE_FBI		0
-#define INCLUDE_TSI		0
+#define INCLUDE_LINEEDIT        0 // enable command line editor and history
+#define INCLUDE_MALLOC		0 // enable monitor's malloc, 'heap' command on the CLI
+#define INCLUDE_MEMCMDS         0 // memory display, modification and test commands (see memcmds.c)
+#define INCLUDE_MEMTRACE	0 // enable simple memory tracing, simple printf()-like function that
+					// logs data to RAM instead of to UART
+#define INCLUDE_PORTCMD	        0 // if set, the mon_portcmd(int cmd, void *arg) API can be used
+					// to build port-specific API extensions
+#define INCLUDE_PROFILER        0 // enable some code and a CLI command to provide an application
+					// with some task and function level profiling
+#define INCLUDE_QUICKMEMCPY     0 // enable faster memory stuff in genlib.c
+#define INCLUDE_REDIRECT        0 // enable monitor's CLI to redirect command output to a TFS file
 #define INCLUDE_SD		0
-#define INCLUDE_DNS		0
+#define INCLUDE_SHELLVARS	0 // enable shell variable functionality in the monitor
+#define INCLUDE_STOREMAC        0 // force user to establish MAC in the etheradd space allocated in 
+					// reset.s; requires flash drivers
+#define INCLUDE_STRACE          0 // enable 'strack trace' command
+#define INCLUDE_STRUCT          0 // enable the struct command, requires TFS
+#define INCLUDE_SYSLOG	        0 
+#define INCLUDE_TFS             0 // required by other TFS macros, provides basic TFS functionality
+#define INCLUDE_TFSAPI          0 // TFS hooks for use by applications
+#define INCLUDE_TFSCLI          0 // enable TFS command on the command line
+#define INCLUDE_TFSSCRIPT       0 // enables CLI commands associated with scripts
+#define INCLUDE_TFSSYMTBL       0 // enable symbol-table functionality
+#define INCLUDE_TFTP            0 // TFTP client and server, assumes ethernet is enabled
+#define INCLUDE_TSI		0
+#define INCLUDE_UNZIP           0 // zlib stuff
+#define INCLUDE_XMODEM          0 // enable xmodem
+#define INCLUDE_VERBOSEHELP     0 // enable full help text
+#define INCLUDE_USRLVL		0 // if set, code that incorporates user levels is included in the
+					// build
 
 /* Inclusion of this next file will make sure that all of the above
  * inclusions are legal; and warn/adjust where necessary.
