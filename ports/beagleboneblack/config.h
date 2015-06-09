@@ -132,10 +132,10 @@
  * The 'TYPE' definition is used for ifdefs in the code and the 'NAME'
  * is used for printfs in the code.
  */
-#define CPU_TYPE        OMAP3530
-#define CPU_NAME        "TI OMAP3530 Cortex-A8"
-#define PLATFORM_TYPE   CSB740
-#define PLATFORM_NAME   "Cogent CSB740"
+#define CPU_TYPE        AM3358
+#define CPU_NAME        "TI AM3358 Cortex-A8"
+#define PLATFORM_TYPE   BEAGLEBONEBLACK
+#define PLATFORM_NAME   "Beaglebone Black"
 
 /* Specify the size of the memory block (in monitor space) that is to be
  * allocated to malloc in the monitor.  Note that this size can be dynamically
