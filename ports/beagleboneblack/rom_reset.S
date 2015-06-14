@@ -56,7 +56,6 @@
 /*********************************************************************/
     
     .extern start
-    .extern target_putchar_loop
 
     .global reset
     .global coldstart
@@ -95,6 +94,8 @@ coldstart_1:
 	msr	cpsr,r0
 
 //	bl cache_init
+
+// perform DDR3 initialization here
 
 /********************************************************************/
 
@@ -180,8 +181,7 @@ warmstart:
     
     mov r0, r11
 jump_to_c:
-    bl target_putchar_loop
-    //bl start
+    bl start
 
     /* the C code should never return */
     b reset

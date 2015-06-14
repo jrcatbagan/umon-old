@@ -37,6 +37,54 @@
 
 
 /*=====================================================================================*/
+/* EMIF0 Configuration Registers */
+/*=====================================================================================*/
+#define EMIF0_BASE			0x4C000000
+#define EMIFO_REG(_x_)			*(vulong *)(EMIFO_BASE + _x_)
+/*-------------------------------------------------------------------------------------*/
+/* EMIFO Register offsets */
+#define EMIF_MOD_ID_REV			0x0000
+#define STATUS				0x0004
+#define SDRAM_CONFIG			0x0008
+#define SDRAM_CONFIG_2			0x000C
+#define SDRAM_REF_CTRL			0x0010
+#define SDRAM_REF_CTRL_SHOW		0x0014
+#define SDRAM_TIM_1			0x0018
+#define SDRAM_TIM_1_SHDW		0x001C
+#define SDRAM_TIM_2			0x0020
+#define SDRAM_TIM_2_SHDW		0x0024
+#define SDRAM_TIM_3			0x0028
+#define SDRAM_TIM_3_SHDW		0x002C
+#define PWR_MGMT_CTRL			0x0038
+#define PWR_MGMT_CTRL_SHDW		0x003C
+#define INTERFACE_CONFIG		0x0054
+#define INTERFACE_CONFIG_VAL_1		0x0058
+#define INTERFACE_CONFIG_VAL_2		0x005C
+#define PERF_CNT_1			0x0080
+#define PERF_CNT_2			0x0084
+#define PERF_CNT_CFG			0x0088
+#define PERF_CNT_SEL			0x008C
+#define PERF_CNT_TIM			0x0090
+#define READ_IDLE_CTRL			0x0098
+#define READ_IDLE_CTRL_SHDW		0x009C
+#define IRQSTATUS_RAW_SYS		0x00A4
+#define IRQSTATUS_SYS			0x00AC
+#define IRQENABLE_SET_SYS		0x00B4
+#define IRQENABLE_CLR_SYS		0x00BC
+#define ZQ_CONFIG			0x00C8
+#define RW_LVL_RAMP_WNDW		0x00D4
+#define RW_LVL_RAMP_CTRL		0x00D8
+#define RW_LVL_CTRL			0x00DC
+#define DDR_PHY_CTRL_1			0x00E4
+#define DDR_PHY_CTRL_1_SHDW		0x00E8
+#define PRIORITY_TO_CLASS_SRVC_MAP	0x0100
+#define CONN_ID_TO_CLASS_SRVC_1_MAP	0x0104
+#define CONN_ID_TO_CLASS_SRVC_2_MAP	0x0108
+#define RW_EXEC_THRESHOLD		0x0120
+/*=====================================================================================*/
+
+
+/*=====================================================================================*/
 /* McASPx Data Registers */
 /*=====================================================================================*/
 #define MCASP0_DATA_REGS_BASE		0x46000000

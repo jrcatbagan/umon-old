@@ -173,7 +173,7 @@
 					// a hardware-resident clock whose rate is defined by 
 					// TIMER_TICKS_PER_MSEC
 #define INCLUDE_GDB		0 // enable 'gdb' command, incomplete facility with the eventual
-					goal of hooking up to a gdb debugger
+					// goal of hooking up to a gdb debugger
 #define INCLUDE_ICMP		0
 #define INCLUDE_JFFS2		0
 #define INCLUDE_JFFS2ZLIB	0
