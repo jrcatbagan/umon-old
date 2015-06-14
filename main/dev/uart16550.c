@@ -195,8 +195,39 @@ target_gotachar(void)
 }
 
 void
-target_putchar_loop(void)
+target_putstring(char *string)
 {
-	while (1)
-		target_putchar('j');
+	char *strptr = string;
+	int c;
+
+	while (*strptr != '\0')
+		c = target_putchar(*strptr);		
+}
+
+void
+target_putval_ashex(unsigned int byte_len, unsigned char *val)
+{
+	int i, c;
+	unsigned int value;
+	char out;
+
+	for (i = byte_len - 1; i >= 0; i--) {a
+		value = val[i];
+		value >>= 4;
+		value &= 0x0F;
+		if (value < 10)
+			out = value + 48;
+		else
+			out = value + 55;
+		c = target_putchar(out);
+
+		value = val[i];
+		value &= 0x0F;
+		if (value < 10)
+			out = value + 48;
+		else
+			out = value + 55;
+		c = target_putchar(out);
+	}
+	c = target_putchar('\n');
 }
